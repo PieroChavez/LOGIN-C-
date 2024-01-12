@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     provideAuth(() => getAuth()),
 
     // error solution NullInjectError
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+      BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
