@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { AsyncPipe, NgIf } from '@angular/common';
 
+
+import { AuthService } from 'src/app/shared/services/auth.service';
+
+
+
 @Component({
   selector: 'app-navegation-heade',
   templateUrl: './navegation-heade.component.html',
@@ -17,4 +22,18 @@ export class NavegationHeadeComponent {
       map(result => result.matches),
       shareReplay()
     );
+    
+
+  constructor(private authService: AuthService) {
+
+  }
+
+
+  logOut() {
+    this.authService.logOut();
+  }
 }
+
+
+
+

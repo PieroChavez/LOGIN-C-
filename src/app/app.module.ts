@@ -11,13 +11,25 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavegationHeadeComponent } from './components/dashboard/navegation-heade/navegation-heade.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DashboardUnoComponent } from './components/dashboard/dashboard-uno/dashboard-uno.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavegationHeadeComponent,
+    DashboardUnoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +39,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     // error solution NullInjectError
     AngularFireModule.initializeApp(environment.firebase),
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatSidenavModule,
+      MatIconModule,
+      MatListModule,
+      MatGridListModule,
+      MatCardModule,
+      MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
